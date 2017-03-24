@@ -1,6 +1,6 @@
-var React = require ('react');
-var Tiles = require ('./Tiles');
-var Sizes = require ('../arrays/sizes');
+import React from 'react';
+import Tiles from './Tiles';
+import Sizes from '../arrays/sizes';
 
 var Floor=React.createClass({
 	render: function(){

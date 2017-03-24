@@ -1,4 +1,4 @@
-var Sizes=require('./sizes');
+import Sizes from './sizes';
 
 function rotateArr(arr){
 	var	tall=arr.length*2-1,
