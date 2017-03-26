@@ -1,18 +1,16 @@
-import Sizes from '../arrays/sizes'
+import Sizes from '../arrays/sizes';
+import RotateArr from '../arrays/RotateArr';
+import Rhombus from '../arrays/Rhombus';
 
-var	coords=[],
-	floorPos=Sizes.max*Sizes.width;
-for(var i=0;i<Sizes.max;i++){
-		coords.push(i);
-
-}
+var	coords=RotateArr(Sizes.max),
+		floorPos=Sizes.max*Sizes.width;
 
 var coord=function(e){
 	return{
-		left: coords[e]*Sizes.width+floorPos,
-		top: coords[e]*Sizes.width,
+		left: Rhombus(Sizes.max)[e]*Sizes.width,
+		top: e*Sizes.height,
 		width: Sizes.width,
-		height: Sizes.width
+		height: Sizes.height
 	}
 }
 

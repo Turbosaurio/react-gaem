@@ -1,13 +1,11 @@
-import Sizes from './sizes';
-
-function rotateArr(arr){
-	var	tall=arr.length*2-1,
-		iso=[],a,b,c=0;
-	for(var k=0, m=tall; k<tall, m>0; k++,m--){
+function RotateArr(arr){
+	var	arrSquare=arr*2-1,
+			iso=[],a,b,c=0;
+	for(var k=0, m=arrSquare; k<arrSquare, m>0; k++,m--){
 		var	y=k, x=0, u=k;
-		if(k>arr.length-1){
-			y=arr.length-1;
-			x=k-arr.length+1;
+		if(k>arr-1){
+			y=arr-1;
+			x=k-arr+1;
 			u=m-1;
 		}
 		iso.push([[y,x]]);
@@ -23,5 +21,4 @@ function rotateArr(arr){
 	return iso;
 }
 
-var RotateArr=rotateArr(Max);
 module.exports=RotateArr;

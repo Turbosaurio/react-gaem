@@ -1,6 +1,6 @@
 module.exports={
-	max: 20,
+	max: 40,
 	width: 15,
-	heigth: 15,
+	height: 15,
 	gap: 5
 };
