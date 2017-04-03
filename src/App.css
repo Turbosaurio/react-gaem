@@ -491,28 +491,165 @@ template {
   display: none;
 }
 
-/* line 6, compass-sass/sass/App.scss */
-.head-menu {
-  width: 100%;
-  font-family: 'Raleway';
-  background-color: #777;
+/* line 13, compass-sass/sass/App.scss */
+.baby {
+  width: 200px;
+  height: 200px;
+  box-sizing: border-box;
+  display: flex;
+  border-style: solid;
+  border-width: 10px;
+  border-top-color: #c62317;
+  border-right-color: #fbe2e1;
+  border-bottom-color: #6b130c;
+  border-right-color: #981b12;
 }
-/* line 10, compass-sass/sass/App.scss */
+/* line 22, compass-sass/sass/parts/_mixins.scss */
+.baby:after {
+  display: block;
+  content: "";
+  background-color: rgba(10, 10, 10, 0.5);
+  width: 100%;
+  height: 50%;
+}
+
+/* line 16, compass-sass/sass/App.scss */
+.head-menu {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  height: 50px;
+  width: 100vw;
+  font-family: 'Raleway';
+  background-color: #333;
+}
+/* line 21, compass-sass/sass/App.scss */
+.head-menu img {
+  width: 50px;
+  height: 50px;
+  content: "logo";
+}
+/* line 26, compass-sass/sass/App.scss */
 .head-menu ul {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  height: 50px;
+  float: right;
   display: flex;
 }
-/* line 12, compass-sass/sass/App.scss */
+/* line 30, compass-sass/sass/App.scss */
 .head-menu ul li {
-  color: #777;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  height: 50px;
   list-style: none;
 }
-/* line 15, compass-sass/sass/App.scss */
+/* line 33, compass-sass/sass/App.scss */
 .head-menu ul li a {
   display: block;
-  color: blue;
+  color: black;
+  box-sizing: border-box;
   text-decoration: none;
+  background-color: white;
+  padding: 15px;
+  color: lighter(#333);
 }
-/* line 19, compass-sass/sass/App.scss */
-.head-menu ul li a:visited, .head-menu ul li a:active, .head-menu ul li a:hover {
+/* line 41, compass-sass/sass/App.scss */
+.head-menu ul li a:hover {
+  background-color: #999;
+}
+/* line 45, compass-sass/sass/App.scss */
+.head-menu ul li .close {
+  background-color: #999;
+}
+/* line 47, compass-sass/sass/App.scss */
+.head-menu ul li .close:hover {
+  background-color: #333;
+  color: white;
+}
+
+/* line 56, compass-sass/sass/App.scss */
+.floor {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+/* line 60, compass-sass/sass/App.scss */
+.floor .tile {
+  box-sizing: border-box;
+  position: absolute;
+  text-align: center;
+  border: 1px solid #c62317;
+  background-color: #666;
+  font-size: .5em;
+  color: white;
+}
+/* line 68, compass-sass/sass/App.scss */
+.floor .tile:hover {
+  background-color: #999;
+  color: #333;
+  cursor: pointer;
+}
+
+/* line 77, compass-sass/sass/App.scss */
+h1 {
+  font-size: 2em;
+}
+
+/* line 77, compass-sass/sass/App.scss */
+h2 {
+  font-size: 4em;
+}
+
+/* line 77, compass-sass/sass/App.scss */
+h3 {
+  font-size: 6em;
+}
+
+/* line 77, compass-sass/sass/App.scss */
+h4 {
+  font-size: 8em;
+}
+
+/* line 77, compass-sass/sass/App.scss */
+h5 {
+  font-size: 10em;
+}
+
+/* line 77, compass-sass/sass/App.scss */
+h6 {
+  font-size: 12em;
+}
+
+/* line 82, compass-sass/sass/App.scss */
+.tile-part {
+  border: 1px solid #999;
+  position: relative;
+}
+
+/* line 82, compass-sass/sass/App.scss */
+.floor-part {
+  border: 1px solid #444;
+  position: absolute;
+}
+
+/* line 82, compass-sass/sass/App.scss */
+.etage-part {
+  border: 1px solid #222;
+  position: relative;
+}
+
+/* line 87, compass-sass/sass/App.scss */
+.tile {
   color: red;
 }
+/* line 89, compass-sass/sass/App.scss */
+.tile:hover {
+  color: green;
+}
+
+/*'../components/App.css'*/
+
+/*# sourceMappingURL=App.css.map */

@@ -1,27 +1,93 @@
 @import "compass";
+@import "parts/_mixins";
 @import "parts/variables";
 @import "parts/normalize";
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,900');
 
+@mixin bebe{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	height: $menuheight;
+}
+.baby{
+	@include drop-box($rot,10px);
+}
 .head-menu{
-	width: 100%;
+	@include bebe;
+	width: 100vw;
 	font-family: 'Raleway';
 	background-color: $black;
+	img{
+		width: $menuheight;
+		height: $menuheight;
+		content:"logo";
+	}
 	ul{
+		@include bebe;
+		float: right;
 		display: flex;
 		li{
-			color: $black;
+			@include bebe;
 			list-style: none;
 			a{
 				display: block;
-				color: blue;
+				color: black;
+				box-sizing: border-box;
 				text-decoration: none;
-				&:visited,
-				&:active,
-				&:hover {
-					color: red;
+				background-color: white;
+				padding: 15px;
+				color: lighter($black);
+				&:hover{
+					background-color: #999;
+				}
+			}
+			.close{
+				background-color: #999;
+				&:hover{
+					background-color: $black;
+					color: white;
 				}
 			}
 		}
 	}
 }
+
+.floor{
+	width: 80%;
+	margin: 0 auto;
+	position: relative;
+	.tile{
+		box-sizing: border-box;
+		position: absolute;
+		text-align: center;
+		border:	1px solid $rot;
+		background-color: $gray;
+		font-size: .5em;
+		color: white;
+		&:hover{
+			background-color: $hellgrau;
+			color: $black;
+			cursor: pointer;
+		}
+	}
+}
+
+@for $i from 1 through 6{
+	h#{$i}{
+		font-size: $i*2em;
+	}
+}
+@each $item, $color, $position in (tile, #999, relative),(floor, #444, absolute), (etage, #222, relative){
+	.#{$item}-part{
+		border: 1px solid $color;
+		position: $position;
+	}
+}
+.tile{
+	color: red;
+	&:hover{
+		color: green;
+	}
+}
+/*'../components/App.css'*/

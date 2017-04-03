@@ -1,6 +1,6 @@
 function RotateArr(arr){
 	var	arrSquare=arr*2-1,
-			iso=[],a,b,c=0;
+			iso=[],a,b;
 	for(var k=0, m=arrSquare; k<arrSquare, m>0; k++,m--){
 		var	y=k, x=0, u=k;
 		if(k>arr-1){
@@ -15,7 +15,6 @@ function RotateArr(arr){
 			a--;
 			b++;
 			iso[k].push([a,b]);
-			c++;
 		}
 	}
 	return iso;
