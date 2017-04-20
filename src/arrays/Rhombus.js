@@ -1,12 +1,11 @@
 var Rhombus=function(e){
 	var arr=[];
-	for(var i=1;i<e*2;i++){
-		var qui=0;
-		var usa,max=e;
-		i>e ? usa=max-i%e : usa=i;
-		for(var h=1;h<usa;h++){
-			usa/2!=Math.round(usa/2) ? qui++ : qui=h%usa;
-			arr.push([qui+h-usa]);
+	for(var i=0; i<e*2; i++){
+		var qui=0,
+				aux= i>e ? e-i%e : i;
+		for(var h=1;h<aux;h++){
+			aux/2!=Math.round(aux/2) ? qui++ : qui=h%aux;
+			arr.push([qui+h-aux]);
 		};
 	};
 	return arr;

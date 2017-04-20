@@ -1,4 +1,3 @@
-@import "compass";
 @import "parts/_mixins";
 @import "parts/variables";
 @import "parts/normalize";
@@ -9,9 +8,6 @@
 	padding: 0;
 	margin: 0;
 	height: $menuheight;
-}
-.baby{
-	@include drop-box($rot,10px);
 }
 .head-menu{
 	@include bebe;
@@ -52,7 +48,77 @@
 		}
 	}
 }
+@mixin link-button(){
+	display: block;
+	text-decoration: none;
+	color: white;
+}
+@mixin flex-box(){
+	display: flex;
+}
+@mixin reset-box(){
+	padding: 0;
+	box-sizing: border-box;
+}
 
+.menu-container{
+	@include reset-box;
+	width: 100%;
+	height: $menuheight;
+	background: {
+		color: $rot;
+	}
+	img{
+		display: none;
+	}
+	.center-menu{
+		ul{
+			@include flex-box;
+			@include reset-box;
+			justify-content: space-between;
+			list-style-type: none;
+			width: $vp-width;
+			margin: 0 auto;
+			background-color: lighten($rot,50%);
+			li{
+				flex: 1;
+				text-align: center;
+				background-color: lighten($rot,80%);
+				a{
+					@include link-button;
+					background-color: lighten($rot,10%);
+					padding: 15px;
+				}
+			}
+		}
+	}
+}
+
+.quick-container{
+	@include flex-box;
+	@include reset-box;
+	background-color: $black;
+	color: white;
+	width: $vp-width;
+	margin: 0 auto;
+	justify-content: space-between;
+	a{
+		@include link-button;
+		text-align: center;
+		flex: 1;
+		padding: 60px  0;
+		background-color: darken(yellow,20%);
+		cursor: pointer;
+		border-right: 1px solid black;	
+		&:last-child{
+			border-right: none;
+		}
+		&:hover{
+			background-color: $black;
+		}
+	}
+
+}
 .floor{
 	width: 80%;
 	margin: 0 auto;
@@ -65,29 +131,10 @@
 		background-color: $gray;
 		font-size: .5em;
 		color: white;
-		&:hover{
-			background-color: $hellgrau;
-			color: $black;
-			cursor: pointer;
-		}
 	}
 }
 
-@for $i from 1 through 6{
-	h#{$i}{
-		font-size: $i*2em;
-	}
-}
-@each $item, $color, $position in (tile, #999, relative),(floor, #444, absolute), (etage, #222, relative){
-	.#{$item}-part{
-		border: 1px solid $color;
-		position: $position;
-	}
-}
-.tile{
-	color: red;
-	&:hover{
-		color: green;
-	}
-}
+
+
+
 /*'../components/App.css'*/

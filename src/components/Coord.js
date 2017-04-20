@@ -5,8 +5,8 @@ var coord=function(y,x){
 			top=y*Sizes.height,
 			left=x*Sizes.width;
 	return{
-		left: left+400,
 		top: top+50,
+		left: left+400,
 		width: Sizes.width,
 		height: Sizes.height
 	}

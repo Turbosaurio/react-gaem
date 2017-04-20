@@ -8,7 +8,14 @@ class App extends Component{
   render(){
   	return(
   		<div>
-  			<HeadMenu key={1} items={MenuItems}/>
+  			<HeadMenu key={1} type="head-menu" items={MenuItems}/>
+  			<div className="menu-container"><HeadMenu key={2} type="center-menu" items={MenuItems}/></div>
+  			<div className="quick-container">
+  				<a>Uno</a>
+  				<a>Dos</a>
+  				<a>Tres</a>
+  				<a>Cuatro</a>
+  			</div>
   			<Floor />
 			</div>);
   }

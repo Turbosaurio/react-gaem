@@ -10,7 +10,7 @@ var HeadMenu=React.createClass({
 				);
 		}
 		var menu=
-					(<nav className="head-menu">
+					(<nav className={this.props.type}>
 						<img alt="" src=""/>
 						<ul>
 							{a}
